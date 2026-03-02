@@ -1,0 +1,2247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keto Ply | Premium Plywood, Boards & Doors</title>
+
+    <!-- Google Fonts (Poppins for Headings, Open Sans for Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- Global CSS Setup -->
+    <style>
+        /* --- Root Variables (Theme Colors from Logo) --- */
+        :root {
+            --keto-primary-red: #A32125;
+            /* Dark Red from Keto 'K' Logo */
+            --keto-dark-black: #050505;
+            /* Black from Keto text */
+            --keto-pure-white: #ffffff;
+            --keto-light-gray: #f8f9fa;
+            --keto-border-gray: #e9ecef;
+            --keto-text-gray: #555555;
+            --keto-text-muted: #888888;
+
+            --keto-font-heading: 'Poppins', sans-serif;
+            --keto-font-body: 'Open Sans', sans-serif;
+
+            --keto-transition-fast: all 0.3s ease-in-out;
+            --keto-transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+        }
+
+        /* --- CSS Reset & Base Styles --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--keto-font-body);
+            color: var(--keto-text-gray);
+            background-color: var(--keto-pure-white);
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: var(--keto-font-heading);
+            color: var(--keto-dark-black);
+            font-weight: 500;
+            /* Kam kiya gaya weight global headings ke liye */
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        /* =========================================
+           SECTION 1: PREMIUM TWO-TIER NAVBAR 
+           ========================================= */
+
+        .keto-header-wrapper {
+            background-color: var(--keto-pure-white);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1050;
+            width: 100%;
+            transition: var(--keto-transition-smooth);
+        }
+
+        .keto-header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+        }
+
+        .keto-logo-box {
+            flex-shrink: 0;
+            padding: 12px 0;
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-logo-box:hover {
+            transform: scale(1.02);
+        }
+
+        .keto-brand-logo {
+            max-height: 70px;
+            width: auto;
+            object-fit: contain;
+        }
+
+        .keto-nav-center-box {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            padding: 0 40px;
+        }
+
+        .keto-nav-top-row {
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+            padding: 10px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
+        .keto-top-link-item {
+            font-family: var(--keto-font-heading);
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--keto-text-muted);
+            transition: var(--keto-transition-fast);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            letter-spacing: 0.3px;
+        }
+
+        .keto-top-link-item i {
+            color: var(--keto-primary-red);
+            font-size: 0.95rem;
+        }
+
+        .keto-top-link-item:hover {
+            color: var(--keto-primary-red);
+        }
+
+        .keto-nav-bottom-row {
+            display: flex;
+            justify-content: center;
+            gap: 45px;
+            padding: 15px 0 12px 0;
+        }
+
+        .keto-bottom-link-item {
+            font-family: var(--keto-font-heading);
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--keto-dark-black);
+            position: relative;
+            transition: var(--keto-transition-fast);
+            padding-bottom: 6px;
+            text-transform: capitalize;
+            letter-spacing: 0.2px;
+        }
+
+        .keto-bottom-link-item::after {
+            content: '';
+            position: absolute;
+            width: 0%;
+            height: 3px;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--keto-primary-red);
+            transition: var(--keto-transition-smooth);
+            border-radius: 3px;
+        }
+
+        .keto-bottom-link-item:hover,
+        .keto-bottom-link-item.active-link {
+            color: var(--keto-primary-red);
+        }
+
+        .keto-bottom-link-item:hover::after,
+        .keto-bottom-link-item.active-link::after {
+            width: 100%;
+        }
+
+        .keto-dropdown-wrap:hover .dropdown-menu {
+            display: block;
+            margin-top: 0;
+            border-radius: 0 0 10px 10px;
+            border: none;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+            border-top: 3px solid var(--keto-primary-red);
+            animation: fadeInDown 0.3s ease;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .keto-dropdown-wrap .dropdown-menu {
+            transition: var(--keto-transition-fast);
+            padding: 10px 0;
+            min-width: 220px;
+        }
+
+        .keto-dropdown-wrap .dropdown-item {
+            font-family: var(--keto-font-heading);
+            font-weight: 500;
+            font-size: 0.95rem;
+            padding: 12px 25px;
+            color: var(--keto-text-gray);
+            transition: var(--keto-transition-fast);
+            border-bottom: 1px solid var(--keto-light-gray);
+        }
+
+        .keto-dropdown-wrap .dropdown-item:last-child {
+            border-bottom: none;
+        }
+
+        .keto-dropdown-wrap .dropdown-item:hover {
+            background-color: var(--keto-light-gray);
+            color: var(--keto-primary-red);
+            padding-left: 32px;
+        }
+
+        .keto-nav-actions-box {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            flex-shrink: 0;
+        }
+
+        .keto-round-icon-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background-color: var(--keto-primary-red);
+            color: var(--keto-pure-white);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.15rem;
+            transition: var(--keto-transition-smooth);
+            text-decoration: none;
+            border: 2px solid var(--keto-primary-red);
+            box-shadow: 0 4px 10px rgba(163, 33, 37, 0.2);
+        }
+
+        .keto-round-icon-btn:hover {
+            background-color: var(--keto-pure-white);
+            color: var(--keto-primary-red);
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(163, 33, 37, 0.3);
+        }
+
+        .keto-mobile-toggle-btn {
+            background: none;
+            border: none;
+            color: var(--keto-dark-black);
+            font-size: 1.8rem;
+            padding: 5px;
+            cursor: pointer;
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-mobile-toggle-btn:hover {
+            color: var(--keto-primary-red);
+        }
+
+        .keto-mobile-offcanvas {
+            background-color: var(--keto-pure-white);
+            border-right: none;
+            box-shadow: 5px 0 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .keto-mobile-offcanvas .offcanvas-header {
+            border-bottom: 1px solid var(--keto-border-gray);
+            padding: 15px 20px;
+        }
+
+        .keto-mobile-offcanvas .offcanvas-body {
+            padding: 20px;
+        }
+
+        .keto-mobile-menu-link {
+            display: block;
+            font-family: var(--keto-font-heading);
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--keto-dark-black);
+            padding: 14px 0;
+            border-bottom: 1px solid var(--keto-border-gray);
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-mobile-menu-link:hover {
+            color: var(--keto-primary-red);
+            padding-left: 12px;
+        }
+
+        @media (max-width: 1199px) {
+            .keto-nav-center-box {
+                padding: 0 20px;
+            }
+
+            .keto-nav-bottom-row {
+                gap: 30px;
+            }
+
+            .keto-nav-top-row {
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 991px) {
+            .keto-header-container {
+                padding: 12px 20px;
+            }
+
+            .keto-brand-logo {
+                max-height: 55px;
+            }
+
+            .keto-nav-actions-box {
+                gap: 10px;
+            }
+
+            .keto-round-icon-btn {
+                width: 38px;
+                height: 38px;
+                font-size: 1rem;
+            }
+        }
+
+        /* =========================================
+           SECTION 2: PREMIUM HERO SLIDER
+           ========================================= */
+
+        .keto-hero-wrapper {
+            position: relative;
+            width: 100%;
+            background-color: var(--keto-dark-black);
+        }
+
+        .keto-hero-carousel-item {
+            position: relative;
+            height: 85vh;
+            min-height: 500px;
+            background-color: #111;
+            overflow: hidden;
+        }
+
+        .keto-hero-bg-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            z-index: 0;
+            transform: scale(1);
+            transition: transform 6s ease-in-out;
+        }
+
+        .carousel-item.active .keto-hero-bg-img {
+            transform: scale(1.05);
+        }
+
+        .keto-hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.3) 60%, rgba(0, 0, 0, 0) 100%);
+            z-index: 1;
+        }
+
+        .keto-hero-content-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+        }
+
+        .keto-hero-content-box {
+            max-width: 850px;
+            padding: 0 15px;
+            position: relative;
+        }
+
+        .keto-hero-subheading {
+            font-family: var(--keto-font-heading);
+            color: var(--keto-primary-red);
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .keto-hero-subheading::before {
+            content: '';
+            width: 40px;
+            height: 2px;
+            background-color: var(--keto-primary-red);
+            display: inline-block;
+        }
+
+        .keto-hero-heading {
+            font-size: 4.5rem;
+            font-weight: 500;
+            color: var(--keto-pure-white);
+            line-height: 1.15;
+            margin-bottom: 25px;
+            text-transform: uppercase;
+            text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+        }
+
+        .keto-btn-pill-custom {
+            display: inline-flex;
+            align-items: center;
+            background-color: var(--keto-pure-white);
+            color: var(--keto-dark-black);
+            font-family: var(--keto-font-heading);
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 6px 6px 6px 25px;
+            border-radius: 50px;
+            transition: var(--keto-transition-smooth);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            text-decoration: none;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .keto-btn-pill-icon {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: var(--keto-primary-red);
+            color: var(--keto-pure-white);
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            margin-left: 15px;
+            transition: var(--keto-transition-fast);
+            font-size: 1.1rem;
+        }
+
+        .keto-btn-pill-custom:hover {
+            background-color: var(--keto-primary-red);
+            color: var(--keto-pure-white);
+            transform: translateX(5px);
+        }
+
+        .keto-btn-pill-custom:hover .keto-btn-pill-icon {
+            background-color: var(--keto-pure-white);
+            color: var(--keto-primary-red);
+        }
+
+        .keto-carousel-indicators {
+            justify-content: flex-start;
+            margin-left: 8%;
+            margin-bottom: 40px;
+            z-index: 3;
+        }
+
+        .keto-carousel-indicators button {
+            width: 40px !important;
+            height: 4px !important;
+            border-radius: 2px;
+            margin-right: 10px !important;
+            background-color: var(--keto-pure-white) !important;
+            opacity: 0.4;
+            border: none !important;
+            transition: var(--keto-transition-smooth) !important;
+        }
+
+        .keto-carousel-indicators button.active {
+            opacity: 1;
+            width: 60px !important;
+            background-color: var(--keto-primary-red) !important;
+        }
+
+        @media (max-width: 991px) {
+            .keto-hero-heading {
+                font-size: 3.5rem;
+            }
+
+            .keto-hero-carousel-item {
+                height: 70vh;
+                min-height: 500px;
+            }
+
+            .keto-hero-overlay {
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.5) 60%, rgba(0, 0, 0, 0.1) 100%);
+            }
+
+            .keto-carousel-indicators {
+                margin-left: 5%;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .keto-hero-heading {
+                font-size: 2.2rem;
+                margin-bottom: 20px;
+                font-weight: 600;
+            }
+
+            .keto-hero-overlay {
+                background: rgba(0, 0, 0, 0.55);
+            }
+
+            .keto-hero-content-container {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .keto-hero-subheading {
+                justify-content: center;
+            }
+
+            .keto-hero-subheading::before,
+            .keto-hero-subheading::after {
+                content: '';
+                width: 30px;
+                height: 2px;
+                background-color: var(--keto-primary-red);
+                display: inline-block;
+            }
+
+            .keto-carousel-indicators {
+                justify-content: center;
+                margin-left: 0;
+            }
+        }
+
+        /* =========================================
+           GLOBAL SECTION HEADER (CENTERED & BIGGER)
+           ========================================= */
+        .keto-section-header-centered {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 50px;
+            text-align: center;
+            flex-wrap: wrap;
+        }
+
+        .keto-number-outline {
+            font-family: var(--keto-font-heading);
+            font-size: 7rem;
+            font-weight: 300;
+            color: transparent;
+            -webkit-text-stroke: 2px #e5e5e5;
+            line-height: 1;
+            margin-right: 25px;
+        }
+
+        .keto-section-title-clean {
+            font-size: 3.5rem;
+            font-weight: 500;
+            color: var(--keto-dark-black);
+            margin: 0;
+            text-transform: capitalize;
+            line-height: 1.1;
+        }
+
+        @media (max-width: 768px) {
+            .keto-section-header-centered {
+                margin-bottom: 35px;
+            }
+
+            .keto-number-outline {
+                font-size: 4.5rem;
+                margin-right: 15px;
+                -webkit-text-stroke: 1.5px #e5e5e5;
+            }
+
+            .keto-section-title-clean {
+                font-size: 2.5rem;
+            }
+        }
+
+
+        /* =========================================
+           SECTION 3: ABOUT US 
+           ========================================= */
+        .keto-about-wrapper {
+            padding: 90px 0 60px 0;
+            background-color: var(--keto-pure-white);
+            overflow: hidden;
+        }
+
+        .keto-about-img-box {
+            position: relative;
+            z-index: 1;
+            padding-right: 30px;
+            padding-bottom: 30px;
+        }
+
+        .keto-about-img-box::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            width: 80%;
+            height: 80%;
+            border: 4px solid var(--keto-primary-red);
+            border-radius: 8px;
+            z-index: -1;
+            transition: var(--keto-transition-smooth);
+        }
+
+        .keto-about-img-box:hover::before {
+            transform: translate(-15px, -15px);
+        }
+
+        .keto-about-main-img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 2;
+        }
+
+        .keto-about-badge {
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            background-color: var(--keto-dark-black);
+            color: var(--keto-pure-white);
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            border: 8px solid var(--keto-pure-white);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            z-index: 3;
+            animation: float 4s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .keto-about-badge-number {
+            font-family: var(--keto-font-heading);
+            font-size: 3rem;
+            font-weight: 800;
+            line-height: 1;
+            color: var(--keto-primary-red);
+            margin-bottom: 5px;
+        }
+
+        .keto-about-badge-text {
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            line-height: 1.2;
+        }
+
+        .keto-about-text {
+            color: var(--keto-text-gray);
+            font-size: 1.05rem;
+            line-height: 1.7;
+            margin-bottom: 30px;
+        }
+
+        .keto-about-features {
+            list-style: none;
+            padding: 0;
+            margin-bottom: 40px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+
+        .keto-about-features li {
+            width: calc(50% - 15px);
+            font-size: 1.1rem;
+            font-family: var(--keto-font-heading);
+            font-weight: 600;
+            color: var(--keto-dark-black);
+            display: flex;
+            align-items: center;
+        }
+
+        .keto-about-features li i {
+            color: var(--keto-primary-red);
+            margin-right: 12px;
+            font-size: 1.3rem;
+        }
+
+        @media (max-width: 991px) {
+            .keto-about-img-box {
+                margin-bottom: 60px;
+                padding-right: 20px;
+            }
+
+            .keto-about-badge {
+                width: 140px;
+                height: 140px;
+                border-width: 6px;
+            }
+
+            .keto-about-badge-number {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .keto-about-features li {
+                width: 100%;
+            }
+
+            .keto-about-img-box::before {
+                display: none;
+            }
+
+            .keto-about-img-box {
+                padding-right: 0;
+                padding-bottom: 0;
+            }
+
+            .keto-about-badge {
+                right: -10px;
+                bottom: -20px;
+                width: 120px;
+                height: 120px;
+            }
+
+            .keto-about-badge-number {
+                font-size: 2rem;
+            }
+        }
+
+        /* =========================================
+           SECTION 4: 02 EXPLORE PRODUCTS (CAROUSEL)
+           ========================================= */
+        .keto-explore-section {
+            padding: 60px 0 90px 0;
+            background-color: var(--keto-light-gray);
+        }
+
+        .keto-interior-card {
+            text-decoration: none;
+            display: block;
+            background-color: var(--keto-pure-white);
+            border-radius: 8px;
+            padding: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-interior-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        }
+
+        .keto-interior-img-wrapper {
+            width: 100%;
+            aspect-ratio: 1/1;
+            overflow: hidden;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .keto-interior-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease;
+        }
+
+        .keto-interior-card:hover .keto-interior-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        .keto-interior-card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .keto-interior-card-title {
+            color: var(--keto-dark-black);
+            font-family: var(--keto-font-heading);
+            font-weight: 500;
+            font-size: 1.1rem;
+            margin: 0;
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-interior-card:hover .keto-interior-card-title {
+            color: var(--keto-primary-red);
+        }
+
+        .keto-circle-arrow-btn {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background-color: var(--keto-light-gray);
+            color: var(--keto-text-muted);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 0.9rem;
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-interior-card:hover .keto-circle-arrow-btn {
+            background-color: var(--keto-primary-red);
+            color: var(--keto-pure-white);
+        }
+
+        .keto-products-indicators {
+            bottom: -50px;
+            margin-bottom: 0;
+        }
+
+        .keto-products-indicators button {
+            width: 12px !important;
+            height: 12px !important;
+            border-radius: 50%;
+            background-color: var(--keto-text-gray) !important;
+            opacity: 0.4;
+            margin: 0 6px !important;
+            border: none !important;
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-products-indicators button.active {
+            opacity: 1;
+            background-color: var(--keto-primary-red) !important;
+            transform: scale(1.3);
+        }
+
+        /* =========================================
+           SECTION 5: 03 FIND WHAT YOU NEED
+           ========================================= */
+        .keto-find-section {
+            padding: 60px 0 90px 0;
+            background-color: var(--keto-pure-white);
+        }
+
+        .keto-find-box {
+            background-color: var(--keto-dark-black);
+            color: var(--keto-pure-white);
+            border-radius: 8px;
+            padding: 40px;
+            display: flex;
+            align-items: flex-start;
+            gap: 25px;
+            height: 100%;
+            transition: var(--keto-transition-fast);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        .keto-find-box:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+        }
+
+        .keto-find-icon {
+            width: 60px;
+            height: 60px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-find-box:hover .keto-find-icon {
+            border-color: var(--keto-primary-red);
+            color: var(--keto-primary-red);
+        }
+
+        .keto-find-content h3 {
+            font-family: var(--keto-font-heading);
+            font-size: 1.6rem;
+            font-weight: 600;
+            color: var(--keto-pure-white);
+            margin-bottom: 10px;
+        }
+
+        .keto-find-content p {
+            font-size: 0.95rem;
+            color: #d1d1d1;
+            margin-bottom: 25px;
+            line-height: 1.5;
+        }
+
+        .keto-find-btn {
+            display: inline-flex;
+            align-items: center;
+            color: var(--keto-pure-white);
+            border: 1px solid var(--keto-pure-white);
+            padding: 8px 24px;
+            border-radius: 50px;
+            font-family: var(--keto-font-heading);
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-find-btn:hover {
+            background-color: var(--keto-primary-red);
+            border-color: var(--keto-primary-red);
+            color: var(--keto-pure-white);
+        }
+
+        @media (max-width: 768px) {
+            .keto-find-box {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .keto-find-content h3 {
+                font-size: 1.3rem;
+            }
+        }
+
+
+        /* =========================================
+           SECTION 6: THE KETO PLY GUARANTEE
+           ========================================= */
+        .keto-guarantee-wrapper {
+            padding: 80px 0;
+            background-color: var(--keto-light-gray);
+            text-align: center;
+        }
+
+        .keto-guarantee-main-heading {
+            font-family: var(--keto-font-heading);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--keto-dark-black);
+            margin-bottom: 60px;
+            text-transform: capitalize;
+        }
+
+        /* 5 items alignment layout */
+        .keto-guarantee-row {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .keto-guarantee-col {
+            flex: 0 0 18%;
+            /* Takes about 1/5th space */
+            max-width: 200px;
+        }
+
+        .keto-guarantee-item {
+            padding: 15px 5px;
+            transition: var(--keto-transition-fast);
+        }
+
+        .keto-guarantee-icon-box {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 2px solid var(--keto-primary-red);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px auto;
+            font-size: 2.2rem;
+            color: var(--keto-primary-red);
+            background-color: var(--keto-pure-white);
+            transition: var(--keto-transition-smooth);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+        }
+
+        .keto-guarantee-item:hover .keto-guarantee-icon-box {
+            background-color: var(--keto-primary-red);
+            color: var(--keto-pure-white);
+            transform: translateY(-8px);
+            box-shadow: 0 10px 25px rgba(163, 33, 37, 0.2);
+        }
+
+        .keto-guarantee-text {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--keto-text-gray);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            line-height: 1.4;
+            margin: 0;
+        }
+
+        @media (max-width: 991px) {
+            .keto-guarantee-main-heading {
+                font-size: 2.8rem;
+                margin-bottom: 40px;
+            }
+
+            .keto-guarantee-col {
+                flex: 0 0 30%;
+                max-width: none;
+            }
+
+            /* 3 items per row */
+        }
+
+        @media (max-width: 768px) {
+            .keto-guarantee-wrapper {
+                padding: 50px 0;
+            }
+
+            .keto-guarantee-main-heading {
+                font-size: 2.2rem;
+            }
+
+            .keto-guarantee-col {
+                flex: 0 0 45%;
+            }
+
+            /* 2 items per row */
+            .keto-guarantee-icon-box {
+                width: 75px;
+                height: 75px;
+                font-size: 1.8rem;
+            }
+
+            .keto-guarantee-text {
+                font-size: 0.75rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .keto-guarantee-col {
+                flex: 0 0 100%;
+                max-width: 250px;
+            }
+
+            /* Stack completely */
+        }
+
+        /* =========================================
+           SECTION 7: PARALLAX DIVIDER
+           ========================================= */
+        .keto-parallax-divider {
+            position: relative;
+            width: 100%;
+            height: 30vh;
+            background-image: url('https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=1920&auto=format&fit=crop');
+            /* Premium wood texture */
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+        }
+
+        /* =========================================
+           SECTION 8: QUALITY, SERVICE, INNOVATION (TEXT)
+           ========================================= */
+        .keto-text-section {
+            background-color: var(--keto-dark-black);
+            padding: 80px 0;
+            color: #d1d1d1;
+        }
+
+        .keto-text-heading {
+            font-family: var(--keto-font-heading);
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--keto-pure-white);
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 15px;
+            letter-spacing: 1px;
+        }
+
+        .keto-text-divider {
+            width: 70px;
+            height: 3px;
+            background-color: var(--keto-primary-red);
+            margin: 0 auto 40px auto;
+            border-radius: 2px;
+        }
+
+        .keto-text-content p {
+            font-family: var(--keto-font-body);
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 25px;
+            text-align: justify;
+        }
+
+        .keto-text-content strong {
+            color: var(--keto-pure-white);
+            font-weight: 700;
+        }
+
+        @media (max-width: 991px) {
+            .keto-text-heading {
+                font-size: 2.8rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .keto-text-section {
+                padding: 60px 0;
+            }
+
+            .keto-text-heading {
+                font-size: 2rem;
+            }
+
+            .keto-text-content p {
+                font-size: 0.95rem;
+                text-align: left;
+                /* Better readability on small screens */
+            }
+        }
+
+        /* =========================================
+           SECTION 9: TESTIMONIALS (GRAHAKON KI PRATIKRIYA)
+           ========================================= */
+        .keto-testimonial-section {
+            background-color: var(--keto-light-gray);
+            padding: 80px 0 100px 0;
+            text-align: center;
+        }
+
+        .keto-testimonial-card {
+            background-color: var(--keto-pure-white);
+            padding: 50px 40px;
+            border-radius: 12px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.05);
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        .keto-quote-icon {
+            font-size: 4rem;
+            color: var(--keto-primary-red);
+            opacity: 0.15;
+            position: absolute;
+            top: 30px;
+            left: 30px;
+            z-index: -1;
+        }
+
+        .keto-client-text {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: var(--keto-text-gray);
+            line-height: 1.8;
+            margin-bottom: 30px;
+        }
+
+        .keto-client-name {
+            font-family: var(--keto-font-heading);
+            font-weight: 700;
+            color: var(--keto-dark-black);
+            font-size: 1.2rem;
+            margin: 0 0 5px 0;
+        }
+
+        .keto-client-role {
+            color: var(--keto-primary-red);
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin: 0;
+        }
+
+        .keto-testimonial-indicators {
+            bottom: -50px;
+        }
+
+        .keto-testimonial-indicators button {
+            width: 10px !important;
+            height: 10px !important;
+            border-radius: 50%;
+            background-color: var(--keto-text-gray) !important;
+            opacity: 0.4;
+            margin: 0 5px !important;
+            border: none !important;
+        }
+
+        .keto-testimonial-indicators button.active {
+            opacity: 1;
+            background-color: var(--keto-primary-red) !important;
+            transform: scale(1.3);
+        }
+
+        @media (max-width: 768px) {
+            .keto-testimonial-card {
+                padding: 40px 20px;
+            }
+
+            .keto-client-text {
+                font-size: 1.05rem;
+            }
+
+            .keto-quote-icon {
+                font-size: 3rem;
+                top: 20px;
+                left: 20px;
+            }
+        }
+
+        /* =========================================
+           SECTION 10: PREMIUM FOOTER
+           ========================================= */
+        .keto-footer {
+            background-color: var(--keto-light-gray);
+            /* Dark se light background kiya */
+            color: var(--keto-text-gray);
+            /* Light text se dark text kiya */
+            padding-top: 80px;
+            border-top: 1px solid var(--keto-border-gray);
+            /* Red border hata kar subtle gray border lagaya */
+        }
+
+        .keto-footer-logo {
+            max-height: 60px;
+            margin-bottom: 25px;
+            /* Filter hata diya taaki original logo dikhe */
+        }
+
+        .keto-footer-desc {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 25px;
+        }
+
+        .keto-footer-heading {
+            color: var(--keto-dark-black);
+            /* White se black heading ki */
+            font-family: var(--keto-font-heading);
+            font-weight: 700;
+            font-size: 1.25rem;
+            margin-bottom: 30px;
+            position: relative;
+            padding-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .keto-footer-heading::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 3px;
+            background-color: var(--keto-primary-red);
+            border-radius: 2px;
+        }
+
+        .keto-footer-link {
+            color: var(--keto-text-gray);
+            /* Light gray se dark gray kiya */
+            text-decoration: none;
+            display: block;
+            margin-bottom: 15px;
+            transition: var(--keto-transition-fast);
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .keto-footer-link:hover {
+            color: var(--keto-primary-red);
+            transform: translateX(5px);
+        }
+
+        .keto-footer-contact p {
+            margin-bottom: 18px;
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
+            line-height: 1.5;
+            font-weight: 500;
+        }
+
+        .keto-footer-contact i {
+            color: var(--keto-primary-red);
+            width: 30px;
+            font-size: 1.1rem;
+            margin-top: 3px;
+        }
+
+        /* Footer Newsletter */
+        .keto-newsletter-form {
+            position: relative;
+        }
+
+        .keto-newsletter-input {
+            background: var(--keto-pure-white);
+            /* Light background for input */
+            border: 1px solid var(--keto-border-gray);
+            color: var(--keto-dark-black);
+            padding: 12px 20px;
+            border-radius: 50px;
+            width: 100%;
+            margin-bottom: 15px;
+            font-size: 0.95rem;
+            transition: var(--keto-transition-fast);
+            box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.02);
+        }
+
+        .keto-newsletter-input:focus {
+            outline: none;
+            border-color: var(--keto-primary-red);
+            background: var(--keto-pure-white);
+            box-shadow: 0 0 0 3px rgba(163, 33, 37, 0.1);
+        }
+
+        .keto-newsletter-btn {
+            background-color: var(--keto-primary-red);
+            color: var(--keto-pure-white);
+            border: 2px solid var(--keto-primary-red);
+            padding: 10px 25px;
+            border-radius: 50px;
+            font-family: var(--keto-font-heading);
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: var(--keto-transition-fast);
+            width: 100%;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .keto-newsletter-btn:hover {
+            background-color: var(--keto-dark-black);
+            border-color: var(--keto-dark-black);
+            color: var(--keto-pure-white);
+        }
+
+        /* Footer Bottom Bar */
+        .keto-footer-bottom {
+            background-color: var(--keto-pure-white);
+            /* Dark se white kiya */
+            padding: 20px 0;
+            margin-top: 60px;
+            border-top: 1px solid var(--keto-border-gray);
+        }
+
+        .keto-footer-bottom-text {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--keto-text-muted);
+            font-weight: 500;
+        }
+
+        .keto-footer-bottom-links a {
+            color: var(--keto-text-muted);
+            text-decoration: none;
+            margin-left: 20px;
+            font-size: 0.9rem;
+            transition: var(--keto-transition-fast);
+            font-weight: 500;
+        }
+
+        .keto-footer-bottom-links a:hover {
+            color: var(--keto-primary-red);
+        }
+
+        @media (max-width: 991px) {
+            .keto-footer-bottom {
+                text-align: center;
+            }
+
+            .keto-footer-bottom-links {
+                margin-top: 15px;
+            }
+
+            .keto-footer-bottom-links a {
+                margin: 0 10px;
+            }
+        }
+
+        /* =========================================
+           COOKIE CONSENT BANNER 
+           ========================================= */
+        .keto-cookie-banner {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background-color: var(--keto-dark-black);
+            color: var(--keto-pure-white);
+            z-index: 1060;
+            padding: 15px 0;
+            box-shadow: 0 -5px 25px rgba(0, 0, 0, 0.2);
+            transition: transform 0.5s ease-in-out;
+            border-top: 2px solid var(--keto-primary-red);
+        }
+
+        .keto-cookie-banner.hidden {
+            transform: translateY(100%);
+        }
+
+        .keto-cookie-text {
+            font-size: 0.95rem;
+            margin: 0;
+            font-weight: 400;
+        }
+
+        .keto-cookie-actions {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+
+        .keto-cookie-btn {
+            font-family: var(--keto-font-heading);
+            font-weight: 600;
+            padding: 8px 25px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            transition: var(--keto-transition-fast);
+            cursor: pointer;
+            border: none;
+        }
+
+        .keto-cookie-accept {
+            background-color: var(--keto-primary-red);
+            color: var(--keto-pure-white);
+        }
+
+        .keto-cookie-accept:hover {
+            background-color: var(--keto-pure-white);
+            color: var(--keto-primary-red);
+        }
+
+        .keto-cookie-decline {
+            background-color: transparent;
+            color: var(--keto-pure-white);
+            border: 1px solid var(--keto-pure-white);
+        }
+
+        .keto-cookie-decline:hover {
+            background-color: var(--keto-pure-white);
+            color: var(--keto-dark-black);
+        }
+
+        @media (max-width: 768px) {
+            .keto-cookie-banner .container {
+                flex-direction: column;
+                text-align: center;
+                gap: 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- =========================================
+         SECTION 1: PREMIUM HEADER NAVBAR
+         ========================================= -->
+
+    <header class="keto-header-wrapper" id="ketoMainHeader">
+        <div class="container-fluid px-lg-5">
+            <div class="keto-header-container">
+
+                <!-- Left Logo -->
+                <div class="keto-logo-box">
+                    <a href="#">
+                        <img src="logo.jpeg" alt="Keto Ply Logo" class="keto-brand-logo"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/200x70/ffffff/A32125?text=KETO+PLY';">
+                    </a>
+                </div>
+
+                <!-- Center Navigation -->
+                <div class="keto-nav-center-box d-none d-lg-flex">
+                    <div class="keto-nav-top-row">
+                        <a href="#dealer" class="keto-top-link-item"><i class="fa-solid fa-handshake"></i> Become a
+                            Dealer</a>
+                        <a href="#enquire" class="keto-top-link-item"><i class="fa-solid fa-file-signature"></i> Enquire
+                            Now</a>
+                        <a href="mailto:info@ketoply.com" class="keto-top-link-item"><i
+                                class="fa-solid fa-envelope"></i> info@ketoply.com</a>
+                        <a href="tel:+919876543210" class="keto-top-link-item"><i class="fa-solid fa-phone"></i> +91
+                            98765 43210</a>
+                    </div>
+
+                    <div class="keto-nav-bottom-row">
+                        <a href="#" class="keto-bottom-link-item active-link">Home</a>
+                        <a href="#about" class="keto-bottom-link-item">About Us</a>
+
+                        <div class="dropdown keto-dropdown-wrap">
+                            <a href="#products" class="keto-bottom-link-item" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products <i class="fa-solid fa-chevron-down ms-1"
+                                    style="font-size: 0.75rem; vertical-align: middle;"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Plywood</a></li>
+                                <li><a class="dropdown-item" href="#">Block Boards</a></li>
+                                <li><a class="dropdown-item" href="#">Flush Doors</a></li>
+                                <li><a class="dropdown-item" href="#">Shuttering Plywood</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="#blogs" class="keto-bottom-link-item">Blogs</a>
+                        <a href="#contact" class="keto-bottom-link-item">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Right Action Icons & Mobile Toggle -->
+                <div class="keto-nav-actions-box">
+                    <div class="d-none d-sm-flex gap-2 me-2 me-lg-0">
+                        <a href="#search" class="keto-round-icon-btn" title="Search"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="#enquiry" class="keto-round-icon-btn" title="Requirements / Enquire"><i
+                                class="fa-solid fa-clipboard-list"></i></a>
+                        <a href="https://wa.me/919876543210" target="_blank" class="keto-round-icon-btn"
+                            title="WhatsApp Us"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+
+                    <button class="keto-mobile-toggle-btn d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#ketoMobileNavPanel" aria-controls="ketoMobileNavPanel">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- OFFCANVAS MOBILE MENU -->
+    <div class="offcanvas offcanvas-start keto-mobile-offcanvas" tabindex="-1" id="ketoMobileNavPanel"
+        aria-labelledby="ketoMobileNavLabel">
+        <div class="offcanvas-header">
+            <img src="logo.jpeg" alt="Keto Ply Logo" style="max-height: 45px;"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/150x45/ffffff/A32125?text=KETO';">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                style="font-size: 1.2rem;"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div class="d-flex flex-column mb-4">
+                <a href="#" class="keto-mobile-menu-link text-danger">Home</a>
+                <a href="#about" class="keto-mobile-menu-link">About Us</a>
+
+                <a class="keto-mobile-menu-link d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" href="#ketoMobileProductsDrop" role="button" aria-expanded="false">
+                    Products <i class="fa-solid fa-chevron-down fs-6"></i>
+                </a>
+                <div class="collapse" id="ketoMobileProductsDrop">
+                    <div class="card card-body border-0 bg-light p-3 mb-2 rounded-3">
+                        <a href="#" class="keto-mobile-menu-link py-2 fs-6 border-0 text-muted">Plywood</a>
+                        <a href="#" class="keto-mobile-menu-link py-2 fs-6 border-0 text-muted">Block Boards</a>
+                        <a href="#" class="keto-mobile-menu-link py-2 fs-6 border-0 text-muted">Flush Doors</a>
+                        <a href="#" class="keto-mobile-menu-link py-2 fs-6 border-0 text-muted">Shuttering Plywood</a>
+                    </div>
+                </div>
+
+                <a href="#blogs" class="keto-mobile-menu-link">Blogs</a>
+                <a href="#contact" class="keto-mobile-menu-link">Contact Us</a>
+            </div>
+
+            <div class="mt-auto pt-4 border-top">
+                <p class="mb-3 fw-semibold"><i class="fa-solid fa-phone me-2 text-danger"></i> +91 98765 43210</p>
+                <p class="mb-4 fw-semibold"><i class="fa-solid fa-envelope me-2 text-danger"></i> info@ketoply.com</p>
+
+                <div class="d-flex gap-3 mt-3">
+                    <a href="#" class="keto-round-icon-btn" style="width: 40px; height: 40px; font-size: 1rem;"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="keto-round-icon-btn" style="width: 40px; height: 40px; font-size: 1rem;"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/919876543210" class="keto-round-icon-btn"
+                        style="width: 40px; height: 40px; font-size: 1rem;"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- =========================================
+         SECTION 2: PREMIUM HERO SLIDER
+         ========================================= -->
+    <section class="keto-hero-wrapper" id="ketoHeroSection">
+        <div id="ketoMainHeroSlider" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-pause="false"
+            data-bs-interval="5000">
+
+            <div class="carousel-indicators keto-carousel-indicators">
+                <button type="button" data-bs-target="#ketoMainHeroSlider" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#ketoMainHeroSlider" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#ketoMainHeroSlider" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+
+            <div class="carousel-inner">
+
+                <!-- Slide 1 -->
+                <div class="carousel-item active keto-hero-carousel-item">
+                    <img src="https://images.unsplash.com/photo-1610555356070-d1fb336f13ee?q=80&w=1920&auto=format&fit=crop"
+                        alt="Premium Plywood Slider 1" class="keto-hero-bg-img">
+                    <div class="keto-hero-overlay"></div>
+                    <div class="keto-hero-content-container">
+                        <div class="container">
+                            <div class="keto-hero-content-box">
+                                <span class="keto-hero-subheading">Unmatched Strength</span>
+                                <h1 class="keto-hero-heading">Protect Furniture From Termites & Moisture</h1>
+                                <a href="#products" class="keto-btn-pill-custom mt-3">
+                                    Explore Products
+                                    <span class="keto-btn-pill-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="carousel-item keto-hero-carousel-item">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1920&auto=format&fit=crop"
+                        alt="Premium Plywood Slider 2" class="keto-hero-bg-img">
+                    <div class="keto-hero-overlay"></div>
+                    <div class="keto-hero-content-container">
+                        <div class="container">
+                            <div class="keto-hero-content-box">
+                                <span class="keto-hero-subheading">Premium Quality</span>
+                                <h1 class="keto-hero-heading">Crafting Elegance For Modern Homes</h1>
+                                <a href="#products" class="keto-btn-pill-custom mt-3">
+                                    View Collection
+                                    <span class="keto-btn-pill-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 3 -->
+                <div class="carousel-item keto-hero-carousel-item">
+                    <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=1920&auto=format&fit=crop"
+                        alt="Premium Plywood Slider 3" class="keto-hero-bg-img">
+                    <div class="keto-hero-overlay"></div>
+                    <div class="keto-hero-content-container">
+                        <div class="container">
+                            <div class="keto-hero-content-box">
+                                <span class="keto-hero-subheading">Commercial Grade</span>
+                                <h1 class="keto-hero-heading">Strong. Durable. Reliable Block Boards.</h1>
+                                <a href="#products" class="keto-btn-pill-custom mt-3">
+                                    Know More
+                                    <span class="keto-btn-pill-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 3: ABOUT US
+         ========================================= -->
+    <section class="keto-about-wrapper" id="about">
+        <div class="container">
+
+            <!-- BIG & CENTERED HEADER -->
+            <div class="keto-section-header-centered" data-aos="fade-up" data-aos-duration="800">
+                <span class="keto-number-outline">01</span>
+                <h2 class="keto-section-title-clean">About Keto Ply</h2>
+            </div>
+
+            <div class="row align-items-center mt-4">
+                <!-- Left Image & Badge -->
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="keto-about-img-box">
+                        <img src="https://images.unsplash.com/photo-1582282577239-b9e78a6dbcd1?q=80&w=800&auto=format&fit=crop"
+                            alt="Keto Ply Quality Wood" class="keto-about-main-img">
+                        <div class="keto-about-badge">
+                            <span class="keto-about-badge-number">25+</span>
+                            <span class="keto-about-badge-text">Years Of<br>Trust</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content -->
+                <div class="col-lg-6 ps-lg-5" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <h3 class="keto-section-title-clean" style="font-size: 2.2rem; margin-bottom: 20px;">Crafting
+                        Quality Plywood For Generations</h3>
+
+                    <p class="keto-about-text">
+                        At Keto Ply, we believe that every great interior starts with a solid foundation. With decades
+                        of expertise in the timber and plywood industry, we deliver unparalleled strength, durability,
+                        and a flawless finish that elevates your living and working spaces.
+                    </p>
+
+                    <ul class="keto-about-features">
+                        <li><i class="fa-solid fa-circle-check"></i> 100% Termite & Borer Proof</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Superior Core Strength</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Eco-Friendly Materials</li>
+                        <li><i class="fa-solid fa-circle-check"></i> Moisture & Water Resistant</li>
+                    </ul>
+
+                    <a href="#contact" class="keto-btn-pill-custom mt-2">
+                        Get in Touch
+                        <span class="keto-btn-pill-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 4: 02 EXPLORE PRODUCTS (CAROUSEL)
+         ========================================= -->
+    <section class="keto-explore-section" id="explore-products">
+        <div class="container">
+
+            <!-- BIG & CENTERED HEADER -->
+            <div class="keto-section-header-centered" data-aos="fade-up" data-aos-duration="800">
+                <span class="keto-number-outline">02</span>
+                <h2 class="keto-section-title-clean">Explore Keto Ply Products</h2>
+            </div>
+
+            <!-- PRODUCT SLIDER (CAROUSEL) -->
+            <div id="ketoProductCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="4000">
+
+                <!-- Indicators (Dots underneath) -->
+                <div class="carousel-indicators keto-products-indicators">
+                    <button type="button" data-bs-target="#ketoProductCarousel" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#ketoProductCarousel" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                </div>
+
+                <!-- Carousel Items -->
+                <div class="carousel-inner pb-4">
+
+                    <!-- SLIDE 1 (First 3 Products) -->
+                    <div class="carousel-item active">
+                        <div class="row g-4">
+                            <!-- Product 1 -->
+                            <div class="col-md-4">
+                                <a href="#" class="keto-interior-card">
+                                    <div class="keto-interior-img-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1505691938895-1758d7feb511?q=80&w=800&auto=format&fit=crop"
+                                            alt="Plywood & Blockboard">
+                                    </div>
+                                    <div class="keto-interior-card-footer">
+                                        <h3 class="keto-interior-card-title">Plywood & Blockboard</h3>
+                                        <div class="keto-circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Product 2 -->
+                            <div class="col-md-4">
+                                <a href="#" class="keto-interior-card">
+                                    <div class="keto-interior-img-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=800&auto=format&fit=crop"
+                                            alt="Premium Doors">
+                                    </div>
+                                    <div class="keto-interior-card-footer">
+                                        <h3 class="keto-interior-card-title">Premium Doors</h3>
+                                        <div class="keto-circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Product 3 -->
+                            <div class="col-md-4">
+                                <a href="#" class="keto-interior-card">
+                                    <div class="keto-interior-img-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1505843490538-5133c6c7d0e1?q=80&w=800&auto=format&fit=crop"
+                                            alt="Decorative Veneers">
+                                    </div>
+                                    <div class="keto-interior-card-footer">
+                                        <h3 class="keto-interior-card-title">Decorative Veneers</h3>
+                                        <div class="keto-circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SLIDE 2 (Next 3 Products) -->
+                    <div class="carousel-item">
+                        <div class="row g-4">
+                            <!-- Product 4 -->
+                            <div class="col-md-4">
+                                <a href="#" class="keto-interior-card">
+                                    <div class="keto-interior-img-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=800&auto=format&fit=crop"
+                                            alt="Shuttering Plywood">
+                                    </div>
+                                    <div class="keto-interior-card-footer">
+                                        <h3 class="keto-interior-card-title">Shuttering Plywood</h3>
+                                        <div class="keto-circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Product 5 -->
+                            <div class="col-md-4">
+                                <a href="#" class="keto-interior-card">
+                                    <div class="keto-interior-img-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1583847268964-b28dc8f51f92?q=80&w=800&auto=format&fit=crop"
+                                            alt="Flush Doors">
+                                    </div>
+                                    <div class="keto-interior-card-footer">
+                                        <h3 class="keto-interior-card-title">Flush Doors</h3>
+                                        <div class="keto-circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <!-- Product 6 -->
+                            <div class="col-md-4">
+                                <a href="#" class="keto-interior-card">
+                                    <div class="keto-interior-img-wrapper">
+                                        <img src="https://images.unsplash.com/photo-1610555356070-d1fb336f13ee?q=80&w=800&auto=format&fit=crop"
+                                            alt="Designer Laminates">
+                                    </div>
+                                    <div class="keto-interior-card-footer">
+                                        <h3 class="keto-interior-card-title">Designer Laminates</h3>
+                                        <div class="keto-circle-arrow-btn"><i class="fa-solid fa-arrow-right"></i></div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 5: 03 FIND WHAT YOU NEED
+         ========================================= -->
+    <section class="keto-find-section" id="find-what-you-need">
+        <div class="container">
+
+            <!-- BIG & CENTERED HEADER -->
+            <div class="keto-section-header-centered" data-aos="fade-up" data-aos-duration="800">
+                <span class="keto-number-outline">03</span>
+                <h2 class="keto-section-title-clean">Find What You Need</h2>
+            </div>
+
+            <!-- Content Row -->
+            <div class="row g-4 mt-2">
+                <!-- Box 1: Material Calculator -->
+                <div class="col-md-6" data-aos="fade-right" data-aos-duration="800">
+                    <div class="keto-find-box">
+                        <div class="keto-find-icon">
+                            <i class="fa-solid fa-calculator"></i>
+                        </div>
+                        <div class="keto-find-content">
+                            <h3>Material Calculator</h3>
+                            <p>Get an Estimated price for your interior needs</p>
+                            <a href="#calculator" class="keto-find-btn">Calculate <i
+                                    class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Box 2: Find Store -->
+                <div class="col-md-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="100">
+                    <div class="keto-find-box">
+                        <div class="keto-find-icon">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="keto-find-content">
+                            <h3>Find nearest Keto Ply Store</h3>
+                            <p>Connect with authorized Keto Ply dealer near you.</p>
+                            <a href="#locate" class="keto-find-btn">Locate <i
+                                    class="fa-solid fa-arrow-right ms-2"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 6: THE KETO PLY GUARANTEE
+         ========================================= -->
+    <section class="keto-guarantee-wrapper" id="quality-guarantee">
+        <div class="container">
+            <!-- Section Heading -->
+            <h2 class="keto-guarantee-main-heading" data-aos="fade-up" data-aos-duration="800">The Keto Ply Guarantee
+            </h2>
+
+            <!-- Guarantee Badges Row -->
+            <div class="keto-guarantee-row">
+
+                <!-- Badge 1: Zero Emission -->
+                <div class="keto-guarantee-col" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="keto-guarantee-item">
+                        <div class="keto-guarantee-icon-box">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <p class="keto-guarantee-text">For Safer Indoor<br>Air Quality</p>
+                    </div>
+                </div>
+
+                <!-- Badge 2: Virus Shield -->
+                <div class="keto-guarantee-col" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="keto-guarantee-item">
+                        <div class="keto-guarantee-icon-box">
+                            <i class="fa-solid fa-shield-virus"></i>
+                        </div>
+                        <p class="keto-guarantee-text">Kills 99.9% Viruses &<br>99.7% Bacteria</p>
+                    </div>
+                </div>
+
+                <!-- Badge 3: Anti-Termite -->
+                <div class="keto-guarantee-col" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="keto-guarantee-item">
+                        <div class="keto-guarantee-icon-box">
+                            <i class="fa-solid fa-bug-slash"></i>
+                        </div>
+                        <p class="keto-guarantee-text">Borer and Fungus Proof<br>Anti-Termite Guarantee</p>
+                    </div>
+                </div>
+
+                <!-- Badge 4: Tech / Quality -->
+                <div class="keto-guarantee-col" data-aos="zoom-in" data-aos-delay="400">
+                    <div class="keto-guarantee-item">
+                        <div class="keto-guarantee-icon-box">
+                            <i class="fa-solid fa-layer-group"></i>
+                        </div>
+                        <p class="keto-guarantee-text">For Best Quality<br>Defect Free Product</p>
+                    </div>
+                </div>
+
+                <!-- Badge 5: Certified -->
+                <div class="keto-guarantee-col" data-aos="zoom-in" data-aos-delay="500">
+                    <div class="keto-guarantee-item">
+                        <div class="keto-guarantee-icon-box">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <p class="keto-guarantee-text">To Ensure Healthy &<br>Safe Environment</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 7: PARALLAX DIVIDER
+         ========================================= -->
+    <section class="keto-parallax-divider" aria-label="Parallax Background Section">
+        <!-- Sirf parallax background ke liye khali section -->
+    </section>
+
+    <!-- =========================================
+         SECTION 8: TEXT SECTION (QUALITY & INNOVATION)
+         ========================================= -->
+    <section class="keto-text-section" id="quality-service">
+        <div class="container">
+            <!-- Heading & Divider -->
+            <h2 class="keto-text-heading" data-aos="fade-up" data-aos-duration="800">QUALITY. SERVICE. INNOVATION.</h2>
+            <div class="keto-text-divider" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100"></div>
+
+            <!-- Paragraph Content -->
+            <div class="row justify-content-center">
+                <div class="col-lg-10 keto-text-content" data-aos="fade-up" data-aos-duration="800"
+                    data-aos-delay="200">
+                    <p>Wood panels & wood wall paneling have been done traditionally using solid wood timber but with
+                        the gradual time lapse and rising matters pertaining to solid wood availability, plywood panels
+                        have become the most preferred product nowadays. In a vast country like India where we have
+                        multiple climatic zones & environmental factors affecting product performance every day
+                        (humidity, moisture, heat, dust), wooden wall panels or decorative wooden panels need to be
+                        carefully crafted as well as curated to withstand these elements.</p>
+                    <p>Not every other wood panel product available in the market complies with such specific needs or
+                        undergoes rigorous testing from time to time. <strong>Keto Ply</strong> as a responsible brand
+                        understands all these critical factors and accordingly has developed customer-centric products.
+                        Right from the careful selection of raw materials to individual veneer seasoning, Keto Ply makes
+                        sure that only full core & full panel veneers are used for all plywood products. Similarly, all
+                        pinewood & hardwood timber for Block Boards as well as Flush Doors construction are carefully
+                        ripped and thereafter seasoned (kiln seasoning + air seasoning) for providing the best quality
+                        products.</p>
+                    <p>The entire gamut of products comprising of Block Board, Waterproof Plywood, Hardwood Plywood,
+                        Moisture Resistant Plywood, and Flush Doors are all made to deliver performance beyond
+                        expectations and comes with warranty coverage. Therefore, with a customer-centric approach along
+                        with a best-in-class manufacturing process, every Keto Ply product has some unique features
+                        which make them stand out in the market and rightly caters to the needs of our Indian consumers.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 9: TESTIMONIALS
+         ========================================= -->
+    <section class="keto-testimonial-section" id="testimonials">
+        <div class="container">
+
+            <!-- BIG & CENTERED HEADER -->
+            <div class="keto-section-header-centered" data-aos="fade-up" data-aos-duration="800">
+                <span class="keto-number-outline">04</span>
+                <h2 class="keto-section-title-clean">Customer Testimonials</h2>
+            </div>
+
+            <!-- Testimonial Slider -->
+            <div id="ketoTestimonialSlider" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000"
+                data-aos="zoom-in" data-aos-duration="1000">
+
+                <!-- Indicators -->
+                <div class="carousel-indicators keto-testimonial-indicators">
+                    <button type="button" data-bs-target="#ketoTestimonialSlider" data-bs-slide-to="0" class="active"
+                        aria-current="true" aria-label="Review 1"></button>
+                    <button type="button" data-bs-target="#ketoTestimonialSlider" data-bs-slide-to="1"
+                        aria-label="Review 2"></button>
+                    <button type="button" data-bs-target="#ketoTestimonialSlider" data-bs-slide-to="2"
+                        aria-label="Review 3"></button>
+                </div>
+
+                <div class="carousel-inner">
+                    <!-- Review 1 -->
+                    <div class="carousel-item active">
+                        <div class="keto-testimonial-card">
+                            <i class="fa-solid fa-quote-left keto-quote-icon"></i>
+                            <p class="keto-client-text">"Keto Ply has given my home's interior a new and premium look.
+                                The quality of their plywood is truly excellent and there is no fear of termites. I
+                                would 100% recommend it!"</p>
+                            <h4 class="keto-client-name">Amit Sharma</h4>
+                            <p class="keto-client-role">Interior Designer</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="carousel-item">
+                        <div class="keto-testimonial-card">
+                            <i class="fa-solid fa-quote-left keto-quote-icon"></i>
+                            <p class="keto-client-text">"The strength of both flush doors and block boards is
+                                outstanding. For the past 5 years, I have been using only Keto Ply in all my major
+                                projects. Their support is also very good."</p>
+                            <h4 class="keto-client-name">Rahul Verma</h4>
+                            <p class="keto-client-role">Civil Contractor</p>
+                        </div>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="carousel-item">
+                        <div class="keto-testimonial-card">
+                            <i class="fa-solid fa-quote-left keto-quote-icon"></i>
+                            <p class="keto-client-text">"Keto Ply has no match in both service and quality. Their Virus
+                                Shield feature is very essential in today's time. My whole family is very happy with the
+                                new furniture."</p>
+                            <h4 class="keto-client-name">Priya Singh</h4>
+                            <p class="keto-client-role">Homeowner</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 10: PREMIUM FOOTER
+         ========================================= -->
+    <footer class="keto-footer" id="footer">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Column 1: Brand & About -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+                    <img src="logo.jpeg" alt="Keto Ply Logo" class="keto-footer-logo"
+                        onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60/A32125/ffffff?text=KETO+PLY';">
+                    <p class="keto-footer-desc">
+                        Keto Ply, a symbol of premium quality and trust. We manufacture the strongest and most premium
+                        plywood, block boards, and doors for your home and office. Trust us for a solid foundation.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="keto-round-icon-btn" style="width: 38px; height: 38px; font-size: 1rem;"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="keto-round-icon-btn" style="width: 38px; height: 38px; font-size: 1rem;"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="keto-round-icon-btn" style="width: 38px; height: 38px; font-size: 1rem;"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="keto-round-icon-btn" style="width: 38px; height: 38px; font-size: 1rem;"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <h4 class="keto-footer-heading">Quick Links</h4>
+                    <a href="#" class="keto-footer-link">Home</a>
+                    <a href="#about" class="keto-footer-link">About Us</a>
+                    <a href="#explore-products" class="keto-footer-link">Products</a>
+                    <a href="#quality-guarantee" class="keto-footer-link">Quality Guarantee</a>
+                    <a href="#testimonials" class="keto-footer-link">Testimonials</a>
+                    <a href="#blogs" class="keto-footer-link">Blogs</a>
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h4 class="keto-footer-heading">Contact Info</h4>
+                    <div class="keto-footer-contact">
+                        <p><i class="fa-solid fa-location-dot"></i> <span>123, Premium Industrial Estate, Plywood Nagar,
+                                New Delhi - 110001</span></p>
+                        <p><i class="fa-solid fa-phone"></i> <span>+91 98765 43210 <br> +91 11 2345 6789</span></p>
+                        <p><i class="fa-solid fa-envelope"></i> <span>info@ketoply.com <br> support@ketoply.com</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h4 class="keto-footer-heading">Stay Connected</h4>
+                    <p class="mb-3 keto-footer-desc" style="margin-bottom: 15px;">Subscribe to be the first to know
+                        about new products and exclusive offers.</p>
+                    <form class="keto-newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" class="keto-newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="keto-newsletter-btn">Subscribe Now</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom / Copyright -->
+        <div class="keto-footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="keto-footer-bottom-text">&copy; 2026 Keto Ply. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="keto-footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- =========================================
+         COOKIE CONSENT BANNER
+         ========================================= -->
+    <div class="keto-cookie-banner" id="ketoCookieConsentBar">
+        <div class="container d-flex justify-content-between align-items-center">
+            <p class="keto-cookie-text">
+                We use cookies to personalise and enhance your browsing experience on our website. <br
+                    class="d-none d-md-block">
+                Click 'Accept' to get the most out of our site!
+            </p>
+            <div class="keto-cookie-actions mt-3 mt-md-0">
+                <button class="keto-cookie-btn keto-cookie-accept" onclick="closeKetoCookieBanner()">Accept</button>
+                <button class="keto-cookie-btn keto-cookie-decline" onclick="closeKetoCookieBanner()">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Global Script Initialization -->
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            once: true,
+            duration: 1000,
+            offset: 50
+        });
+
+        // Sticky Navbar Shadow effect on Scroll
+        window.addEventListener('scroll', function () {
+            var header = document.getElementById('ketoMainHeader');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+        // Cookie Banner Dismiss Logic
+        function closeKetoCookieBanner() {
+            var cookieBar = document.getElementById('ketoCookieConsentBar');
+            cookieBar.classList.add('hidden');
+        }
+    </script>
+</body>
+
+</html>
