@@ -1,0 +1,442 @@
+/* --- Root Variables (Theme Colors) --- */
+:root {
+  --keto-primary-red: #a32125;
+  --keto-dark-black: #050505;
+  --keto-pure-white: #ffffff;
+  --keto-light-gray: #f8f9fa;
+  --keto-border-gray: #e9ecef;
+  --keto-text-gray: #555555;
+  --keto-text-muted: #888888;
+
+  --keto-font-heading: "Poppins", sans-serif;
+  --keto-font-body: "Open Sans", sans-serif;
+
+  --keto-transition-fast: all 0.3s ease-in-out;
+  --keto-transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- Base Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-family: var(--keto-font-body);
+  color: var(--keto-text-gray);
+  background-color: var(--keto-pure-white);
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--keto-font-heading);
+  color: var(--keto-dark-black);
+  font-weight: 600;
+}
+a {
+  text-decoration: none;
+}
+
+/* =========================================
+           SECTION 1: PAGE HEADER BANNER (Top Section)
+           ========================================= */
+.keto-aboutpage-header {
+  position: relative;
+  padding: 120px 0 100px 0;
+  background-image: url("../images/about/freepik__generate-this-img1-image-as-a-hero-section-image-f__22951.jpeg"); /* Premium wood background */
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  text-align: center;
+  height: 60vh;
+}
+
+.keto-aboutpage-header-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 5, 5, 0.8); /* Dark overlay for text readability */
+  z-index: 1;
+}
+
+.keto-aboutpage-header-content {
+  position: relative;
+  z-index: 2;
+}
+
+.keto-aboutpage-title {
+  font-size: 3.5rem;
+  color: var(--keto-pure-white);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.keto-aboutpage-breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-family: var(--keto-font-heading);
+  font-weight: 500;
+  color: var(--keto-pure-white);
+  font-size: 1rem;
+}
+
+.keto-aboutpage-breadcrumb a {
+  color: var(--keto-pure-white);
+  transition: var(--keto-transition-fast);
+}
+
+.keto-aboutpage-breadcrumb a:hover {
+  color: var(--keto-primary-red);
+}
+
+.keto-aboutpage-breadcrumb span {
+  color: var(--keto-primary-red);
+}
+
+/* =========================================
+           SECTION 2: OUR STORY SECTION (Half Image / Half Content)
+           ========================================= */
+.keto-story-section {
+  padding: 100px 0;
+  background-color: var(--keto-pure-white);
+}
+
+.keto-story-subtitle {
+  color: var(--keto-primary-red);
+  font-family: var(--keto-font-heading);
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.keto-story-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  line-height: 1.2;
+}
+
+.keto-story-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: var(--keto-text-gray);
+  text-align: justify;
+}
+
+.keto-story-image-wrap {
+  position: relative;
+  padding-left: 30px;
+  padding-top: 30px;
+}
+
+/* Red square background behind image */
+.keto-story-image-wrap::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 80%;
+  background-color: var(--keto-primary-red);
+  border-radius: 8px;
+  z-index: 0;
+}
+
+.keto-story-image {
+  width: 100%;
+  border-radius: 8px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Experience Box overlapping the image */
+.keto-story-exp-box {
+  position: absolute;
+  bottom: -30px;
+  right: -30px;
+  background-color: var(--keto-dark-black);
+  color: var(--keto-pure-white);
+  padding: 30px;
+  border-radius: 8px;
+  z-index: 2;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  border-bottom: 4px solid var(--keto-primary-red);
+}
+
+.keto-story-exp-box h3 {
+  color: var(--keto-primary-red);
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1;
+}
+
+.keto-story-exp-box p {
+  font-family: var(--keto-font-heading);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin: 10px 0 0 0;
+  font-size: 0.9rem;
+}
+
+/* =========================================
+           SECTION 3: VISION & MISSION 
+           ========================================= */
+.keto-vismis-section {
+  padding: 80px 0;
+  background-color: var(--keto-light-gray);
+}
+
+.keto-vismis-card {
+  background-color: var(--keto-pure-white);
+  border-radius: 12px;
+  padding: 50px 40px;
+  height: 100%;
+  transition: var(--keto-transition-smooth);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.keto-vismis-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--keto-primary-red);
+  transition: var(--keto-transition-smooth);
+  z-index: -1;
+}
+
+.keto-vismis-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* Hover karne par left red border expand hoti hai */
+.keto-vismis-card:hover::before {
+  width: 100%;
+  opacity: 0.03;
+}
+
+.keto-vismis-icon {
+  font-size: 3.5rem;
+  color: var(--keto-primary-red);
+  margin-bottom: 25px;
+}
+
+.keto-vismis-card h3 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--keto-dark-black);
+}
+
+.keto-vismis-card p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* =========================================
+           SECTION 4: CORE VALUES (With Parallax Background)
+           ========================================= */
+.keto-values-section {
+  padding: 100px 0;
+  position: relative;
+  /* Parallax Background setup */
+  background-image: url("https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=1920&auto=format&fit=crop");
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  text-align: center;
+}
+
+.keto-values-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 5, 5, 0.85); /* Dark overlay to make boxes pop */
+  z-index: 1;
+}
+
+.keto-values-main-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 60px;
+  text-transform: capitalize;
+  color: var(--keto-pure-white); /* White text on dark overlay */
+  position: relative;
+  z-index: 2;
+}
+
+.keto-value-box {
+  padding: 30px 20px;
+  /* Premium Glassmorphism Dark Box */
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  height: 100%;
+  transition: var(--keto-transition-fast);
+  position: relative;
+  z-index: 2;
+}
+
+.keto-value-box:hover {
+  border-color: var(--keto-primary-red);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.keto-value-icon {
+  width: 70px;
+  height: 70px;
+  background-color: rgba(255, 255, 255, 0.05); /* Transparent circle */
+  color: var(--keto-primary-red);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 20px auto;
+  transition: var(--keto-transition-fast);
+}
+
+.keto-value-box:hover .keto-value-icon {
+  background-color: var(--keto-primary-red);
+  color: var(--keto-pure-white);
+}
+
+.keto-value-box h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: var(--keto-pure-white);
+}
+
+.keto-value-box p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+  color: #cccccc; /* Light gray text for readability */
+}
+
+/* =========================================
+           SECTION 5: MANUFACTURING EXCELLENCE (Infrastructure)
+           ========================================= */
+.keto-infra-section {
+  background-color: var(--keto-dark-black);
+  padding: 100px 0;
+  color: var(--keto-pure-white);
+  position: relative;
+}
+
+.keto-infra-content h2 {
+  color: var(--keto-pure-white);
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 25px;
+}
+
+.keto-infra-content p {
+  color: #cccccc;
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.keto-infra-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.keto-infra-list li {
+  font-family: var(--keto-font-heading);
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.keto-infra-list li i {
+  color: var(--keto-primary-red);
+  font-size: 1.2rem;
+  margin-right: 15px;
+}
+
+.keto-infra-image {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 991px) {
+  .keto-story-exp-box {
+    position: relative;
+    bottom: auto;
+    right: auto;
+    margin-top: -30px;
+    margin-left: 20px;
+    display: inline-block;
+  }
+  .keto-aboutpage-title {
+    font-size: 2.8rem;
+  }
+  .keto-story-title,
+  .keto-values-main-title,
+  .keto-infra-content h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .keto-aboutpage-header {
+    padding: 80px 0 60px 0;
+  }
+  .keto-aboutpage-title {
+    font-size: 2rem;
+  }
+  .keto-story-image-wrap {
+    padding: 0;
+  }
+  .keto-story-image-wrap::before {
+    display: none;
+  }
+  .keto-story-exp-box {
+    margin-top: 20px;
+    margin-left: 0;
+    width: 100%;
+  }
+}

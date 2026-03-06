@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keto Ply | Premium Plywood, Boards & Doors</title>
+
+    <!-- Google Fonts (Poppins for Headings, Open Sans for Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- custom css -->
+    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="assets/css/about-us.css">
+
+</head>
+
+<body>
+
+    <!-- =========================================
+         SECTION 1: PREMIUM HEADER NAVBAR
+         ========================================= -->
+
+    <header class="keto-header-wrapper" id="ketoMainHeader">
+        <div class="container-fluid px-lg-5">
+            <div class="keto-header-container">
+
+                <!-- Left Logo -->
+                <div class="keto-logo-box">
+                    <a href="index.html">
+                        <img src="assets/images/logo/logo.jpeg" alt="Keto Ply Logo" class="keto-brand-logo"
+                            onerror="this.onerror=null; this.src='https://via.placeholder.com/200x70/ffffff/A32125?text=KETO+PLY';">
+                    </a>
+                </div>
+
+                <!-- Center Navigation -->
+                <div class="keto-nav-center-box d-none d-lg-flex">
+                    <div class="keto-nav-top-row">
+                        <a href="contact-us.html" class="keto-top-link-item"><i class="fa-solid fa-handshake"></i>
+                            Become a
+                            Dealer</a>
+                        <a href="contact-us.html" class="keto-top-link-item"><i class="fa-solid fa-file-signature"></i>
+                            Enquire
+                            Now</a>
+                        <a href="mailto:info@ketoply.com" class="keto-top-link-item"><i
+                                class="fa-solid fa-envelope"></i> info@ketoply.com</a>
+                        <a href="tel:+919161819927" class="keto-top-link-item"><i class="fa-solid fa-phone"></i> +91
+                            9161819927</a>
+                    </div>
+
+                    <div class="keto-nav-bottom-row">
+                        <a href="index.html" class="keto-bottom-link-item active-link">Home</a>
+                        <a href="about-us.html" class="keto-bottom-link-item">About Us</a>
+
+                        <div class="dropdown keto-dropdown-wrap">
+                            <a href="#products" class="keto-bottom-link-item" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Products <i class="fa-solid fa-chevron-down ms-1"
+                                    style="font-size: 0.75rem; vertical-align: middle;"></i>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="plywood.html">Plywood</a></li>
+                                <li><a class="dropdown-item" href="block-boards.html">Block Boards</a></li>
+                                <li><a class="dropdown-item" href="flush-doors.html">Flush Doors</a></li>
+                                <li><a class="dropdown-item" href="shuttering-plywood.html">Shuttering Plywood</a></li>
+                            </ul>
+                        </div>
+
+                        <a href="blogs.html" class="keto-bottom-link-item">Blogs</a>
+                        <a href="contact-us.html" class="keto-bottom-link-item">Contact Us</a>
+                    </div>
+                </div>
+
+                <!-- Right Action Icons & Mobile Toggle -->
+                <div class="keto-nav-actions-box">
+                    <div class="d-none d-sm-flex gap-2 me-2 me-lg-0">
+                        <a href="#search" class="keto-round-icon-btn" title="Search"><i
+                                class="fa-solid fa-magnifying-glass"></i></a>
+                        <a href="contact-us.html" class="keto-round-icon-btn" title="Requirements / Enquire"><i
+                                class="fa-solid fa-clipboard-list"></i></a>
+                        <a href="https://wa.me/919161819927" target="_blank" class="keto-round-icon-btn"
+                            title="WhatsApp Us"><i class="fa-brands fa-whatsapp"></i></a>
+                    </div>
+
+                    <button class="keto-mobile-toggle-btn d-lg-none" type="button" data-bs-toggle="offcanvas"
+                        data-bs-target="#ketoMobileNavPanel" aria-controls="ketoMobileNavPanel">
+                        <i class="fa-solid fa-bars-staggered"></i>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- OFFCANVAS MOBILE MENU -->
+    <div class="offcanvas offcanvas-start keto-mobile-offcanvas" tabindex="-1" id="ketoMobileNavPanel"
+        aria-labelledby="ketoMobileNavLabel">
+        <div class="offcanvas-header">
+            <img src="logo.jpeg" alt="Keto Ply Logo" style="max-height: 45px;"
+                onerror="this.onerror=null; this.src='https://via.placeholder.com/150x45/ffffff/A32125?text=KETO';">
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"
+                style="font-size: 1.2rem;"></button>
+        </div>
+        <div class="offcanvas-body d-flex flex-column">
+            <div class="d-flex flex-column mb-4">
+                <a href="index.html" class="keto-mobile-menu-link text-danger">Home</a>
+                <a href="about-us.html" class="keto-mobile-menu-link">About Us</a>
+
+                <a class="keto-mobile-menu-link d-flex justify-content-between align-items-center"
+                    data-bs-toggle="collapse" href="#ketoMobileProductsDrop" role="button" aria-expanded="false">
+                    Products <i class="fa-solid fa-chevron-down fs-6"></i>
+                </a>
+                <div class="collapse" id="ketoMobileProductsDrop">
+                    <div class="card card-body border-0 bg-light p-3 mb-2 rounded-3">
+                        <a href="plywood.html" class="keto-mobile-menu-link py-2 fs-6 border-0 text-muted">Plywood</a>
+                        <a href="block-boards.html" class="keto-mobile-menu-link py-2 fs-6 border-0 text-muted">Block
+                            Boards</a>
+                        <a href="flush-doors.html" class="keto-mobile-menu-link py-2 fs-6 border-0 text-muted">Flush
+                            Doors</a>
+                        <a href="shuttering-plywood.html"
+                            class="keto-mobile-menu-link py-2 fs-6 border-0 text-muted">Shuttering Plywood</a>
+                    </div>
+                </div>
+
+                <a href="blogs.html" class="keto-mobile-menu-link">Blogs</a>
+                <a href="contact-us.html" class="keto-mobile-menu-link">Contact Us</a>
+            </div>
+
+            <div class="mt-auto pt-4 border-top">
+                <p class="mb-3 fw-semibold"><i class="fa-solid fa-phone me-2 text-danger"></i> +91 9876543210</p>
+                <p class="mb-4 fw-semibold"><i class="fa-solid fa-envelope me-2 text-danger"></i> info@ketoply.com</p>
+
+                <div class="d-flex gap-3 mt-3">
+                    <a href="#" class="keto-round-icon-btn" style="width: 40px; height: 40px; font-size: 1rem;"><i
+                            class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="keto-round-icon-btn" style="width: 40px; height: 40px; font-size: 1rem;"><i
+                            class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/919161819927" class="keto-round-icon-btn"
+                        style="width: 40px; height: 40px; font-size: 1rem;"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <!-- =========================================
+         SECTION 1: PAGE HEADER BANNER (HERO SECTION)
+         ========================================= -->
+    <!-- Hero banner section -->
+    <section class="keto-aboutpage-header">
+        <div class="keto-aboutpage-header-overlay"></div>
+        <div class="container keto-aboutpage-header-content">
+            <h1 class="keto-aboutpage-title" data-aos="fade-down" data-aos-duration="800">About Keto Ply</h1>
+            <div class="keto-aboutpage-breadcrumb" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                <a href="#">Home</a>
+                <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem; color: #888;"></i>
+                <span>About Us</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 2: OUR STORY / ABOUT US (Half Image, Half Content)
+         ========================================= -->
+    <!-- Half content, half image section -->
+    <section class="keto-story-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <!-- Text Content (Half) -->
+                <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                    <span class="keto-story-subtitle">Building Trust Since 1998</span>
+                    <h2 class="keto-story-title">Crafting Excellence in Every Layer of Wood</h2>
+                    <div class="keto-story-text">
+                        <p>At Keto Ply, our journey began with a simple yet powerful vision: to revolutionize the Indian
+                            plywood industry by delivering products that offer unmatched strength, exceptional
+                            durability, and flawless aesthetics. Over the decades, we have grown from a modest
+                            manufacturing unit into one of the most trusted names in the interior and structural wood
+                            panel market.</p>
+                        <p>We understand that plywood is not just a building material; it forms the core of your dream
+                            home and professional workspaces. That is why every Keto Ply product undergoes rigorous
+                            quality checks, advanced seasoning processes, and treatments to make it 100% termite, borer,
+                            and moisture resistant. We don't just sell plywood; we deliver peace of mind.</p>
+                    </div>
+                </div>
+
+                <!-- Image & Experience Box (Half) -->
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="keto-story-image-wrap">
+                        <img src="assets/images/about/about-left.jpeg" alt="Keto Plywood Manufacturing"
+                            class="keto-story-image">
+
+                        <div class="keto-story-exp-box">
+                            <h3>25+</h3>
+                            <p>Years of <br>Excellence</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 3: VISION & MISSION
+         ========================================= -->
+    <!-- Vision & Mission simple cards layout -->
+    <section class="keto-vismis-section">
+        <div class="container">
+            <div class="row g-4">
+
+                <!-- Vision Card -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="800">
+                    <div class="keto-vismis-card">
+                        <i class="fa-regular fa-eye keto-vismis-icon"></i>
+                        <h3>Our Vision</h3>
+                        <p>To be the globally preferred choice for premium wood panels and structural solutions,
+                            recognized for our commitment to sustainable practices, relentless innovation, and
+                            delivering uncompromised quality that empowers modern living spaces.</p>
+                    </div>
+                </div>
+
+                <!-- Mission Card -->
+                <div class="col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <div class="keto-vismis-card">
+                        <i class="fa-solid fa-bullseye keto-vismis-icon"></i>
+                        <h3>Our Mission</h3>
+                        <p>To consistently manufacture and supply technologically advanced, eco-friendly plywood and
+                            block boards. We strive to exceed customer expectations through continuous improvement,
+                            ethical business practices, and building long-lasting relationships with our dealers and
+                            consumers.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 4: CORE VALUES (WITH PARALLAX BACKGROUND)
+         ========================================= -->
+    <!-- Why Choose Us section with fixed parallax background -->
+    <section class="keto-values-section">
+        <!-- Dark overlay over parallax image -->
+        <div class="keto-values-overlay"></div>
+
+        <div class="container" style="position: relative; z-index: 2;">
+            <h2 class="keto-values-main-title" data-aos="fade-up" data-aos-duration="800">Why Choose Keto Ply?</h2>
+
+            <div class="row g-4 mt-2">
+                <!-- Value 1 -->
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="100">
+                    <div class="keto-value-box">
+                        <div class="keto-value-icon">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <h4>Unmatched Quality</h4>
+                        <p>Using 100% full core and full panel veneers, ensuring gap-free, strong, and highly durable
+                            plywood.</p>
+                    </div>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="200">
+                    <div class="keto-value-box">
+                        <div class="keto-value-icon">
+                            <i class="fa-solid fa-leaf"></i>
+                        </div>
+                        <h4>Eco-Friendly</h4>
+                        <p>Committed to sustainable sourcing and zero-emission standards for a safer indoor environment.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="300">
+                    <div class="keto-value-box">
+                        <div class="keto-value-icon">
+                            <i class="fa-solid fa-microchip"></i>
+                        </div>
+                        <h4>Advanced Tech</h4>
+                        <p>Manufactured using high-pressure technology and superior resins for ultimate structural
+                            integrity.</p>
+                    </div>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-duration="800" data-aos-delay="400">
+                    <div class="keto-value-box">
+                        <div class="keto-value-icon">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h4>Absolute Protection</h4>
+                        <p>Chemically treated to be 100% termite proof, borer proof, and highly moisture resistant.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================
+         SECTION 5: MANUFACTURING EXCELLENCE
+         ========================================= -->
+    <!-- Last Section kept as requested -->
+    <section class="keto-infra-section">
+        <div class="container">
+            <div class="row align-items-center">
+
+                <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5" data-aos="fade-right" data-aos-duration="1000">
+                    <div class="keto-infra-content">
+                        <h2>State-of-the-Art Infrastructure</h2>
+                        <p>Quality begins at the source. Keto Ply is manufactured in a highly advanced, fully equipped
+                            facility spread across acres of land. We integrate the latest European pressing technology,
+                            precise calibration machines, and automated core composing to ensure every board is
+                            defect-free.</p>
+                        <p>Our dedicated R&D laboratory constantly tests raw materials and finished products against the
+                            highest international standards, ensuring that what reaches you is nothing short of
+                            perfection.</p>
+
+                        <ul class="keto-infra-list">
+                            <li><i class="fa-solid fa-check-double"></i> Multi-Stage Quality Control Checks</li>
+                            <li><i class="fa-solid fa-check-double"></i> High-Density Pressing Machinery</li>
+                            <li><i class="fa-solid fa-check-double"></i> Advanced Kiln Seasoning Chambers</li>
+                            <li><i class="fa-solid fa-check-double"></i> Automated Calibrators for Uniform Thickness
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-6" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="200">
+                    <!-- Factory/Tech image representation -->
+                    <img src="assets/images/backgrounds/home-paralox.jpeg" alt="Advanced Manufacturing Technology"
+                        class="keto-infra-image">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+
+
+    <!-- =========================================
+         SECTION 10: PREMIUM FOOTER
+         ========================================= -->
+    <footer class="keto-footer" id="footer">
+        <div class="container">
+            <div class="row g-5">
+
+                <!-- Column 1: Brand & About -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-duration="800">
+                    <img src="assets/images/logo/logo.jpeg" alt="Keto Ply Logo" class="keto-footer-logo"
+                        onerror="this.onerror=null; this.src='https://via.placeholder.com/200x60/A32125/ffffff?text=KETO+PLY';">
+                    <p class="keto-footer-desc">
+                        Keto Ply, a symbol of premium quality and trust. We manufacture the strongest and most premium
+                        plywood, block boards, and doors for your home and office. Trust us for a solid foundation.
+                    </p>
+                    <div class="d-flex gap-3 mt-4">
+                        <a href="#" class="keto-round-icon-btn" style="width: 38px; height: 38px; font-size: 1rem;"><i
+                                class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="keto-round-icon-btn" style="width: 38px; height: 38px; font-size: 1rem;"><i
+                                class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="keto-round-icon-btn" style="width: 38px; height: 38px; font-size: 1rem;"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="#" class="keto-round-icon-btn" style="width: 38px; height: 38px; font-size: 1rem;"><i
+                                class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Quick Links -->
+                <div class="col-lg-2 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="100">
+                    <h4 class="keto-footer-heading">Quick Links</h4>
+                    <a href="index.html" class="keto-footer-link">Home</a>
+                    <a href="about-us.html" class="keto-footer-link">About Us</a>
+                    <a href="blogs.html" class="keto-footer-link">Blogs</a>
+                    <a href="contact-us.html" class="keto-footer-link">Contact Us</a>
+                    <a href="plywood.html" class="keto-footer-link">Products</a>
+
+                </div>
+
+                <!-- Column 3: Contact Info -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
+                    <h4 class="keto-footer-heading">Contact Info</h4>
+                    <div class="keto-footer-contact">
+                        <p><i class="fa-solid fa-location-dot"></i> <span>123, Premium Industrial Estate, Plywood Nagar,
+                                New Delhi - 110001</span></p>
+                        <p><i class="fa-solid fa-phone"></i> <span>+91 9876543210 <br> +91 11 2345 6789</span></p>
+                        <p><i class="fa-solid fa-envelope"></i> <span>info@ketoply.com <br> support@ketoply.com</span>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Column 4: Newsletter -->
+                <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
+                    <h4 class="keto-footer-heading">Stay Connected</h4>
+                    <p class="mb-3 keto-footer-desc" style="margin-bottom: 15px;">Subscribe to be the first to know
+                        about new products and exclusive offers.</p>
+                    <form class="keto-newsletter-form" onsubmit="event.preventDefault();">
+                        <input type="email" class="keto-newsletter-input" placeholder="Your Email Address" required>
+                        <button type="submit" class="keto-newsletter-btn">Subscribe Now</button>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Footer Bottom / Copyright -->
+        <div class="keto-footer-bottom">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6 text-center text-md-start">
+                        <p class="keto-footer-bottom-text">&copy; 2026 Keto Ply. All rights reserved.</p>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end">
+                        <div class="keto-footer-bottom-links">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms & Conditions</a>
+                            <a href="#">Sitemap</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <!-- Bootstrap 5 JS Bundle (Includes Popper) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+    <!-- Global Script Initialization -->
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            once: true,
+        });
+
+        // Sticky Navbar Shadow effect on Scroll
+        window.addEventListener('scroll', function () {
+            var header = document.getElementById('ketoMainHeader');
+            if (window.scrollY > 10) {
+                header.style.boxShadow = '0 8px 25px rgba(0, 0, 0, 0.08)';
+            } else {
+                header.style.boxShadow = '0 4px 20px rgba(0, 0, 0, 0.05)';
+            }
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,466 @@
+/* --- Root Variables (Theme Colors from Logo) --- */
+:root {
+  --keto-primary-red: #a32125;
+  /* Dark Red from Keto 'K' Logo */
+  --keto-dark-black: #050505;
+  /* Black from Keto text */
+  --keto-pure-white: #ffffff;
+  --keto-light-gray: #f8f9fa;
+  --keto-border-gray: #e9ecef;
+  --keto-text-gray: #555555;
+  --keto-text-muted: #888888;
+
+  --keto-font-heading: "Poppins", sans-serif;
+  --keto-font-body: "Open Sans", sans-serif;
+
+  --keto-transition-fast: all 0.3s ease-in-out;
+  --keto-transition-smooth: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+/* --- CSS Reset & Base Styles --- */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--keto-font-body);
+  color: var(--keto-text-gray);
+  background-color: var(--keto-pure-white);
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--keto-font-heading);
+  color: var(--keto-dark-black);
+  font-weight: 500;
+  /* Kam kiya gaya weight global headings ke liye */
+}
+
+a {
+  text-decoration: none;
+}
+
+/* =========================================
+           SECTION 1: HERO BANNER
+           ========================================= */
+.keto-product-hero {
+  position: relative;
+  padding: 140px 0 100px 0;
+  background-image: url("https://images.unsplash.com/photo-1533090161767-e6ffed986c88?q=80&w=1920&auto=format&fit=crop");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; /* Parallax effect in hero */
+  text-align: center;
+}
+
+.keto-product-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 5, 5, 0.85);
+  z-index: 1;
+}
+
+.keto-product-hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.keto-product-hero-title {
+  font-size: 3.5rem;
+  color: var(--keto-pure-white);
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+.keto-product-breadcrumb {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--keto-font-heading);
+  font-weight: 500;
+  color: var(--keto-pure-white);
+  font-size: 1rem;
+}
+
+.keto-product-breadcrumb a {
+  color: var(--keto-pure-white);
+  transition: var(--keto-transition-fast);
+}
+
+.keto-product-breadcrumb a:hover {
+  color: var(--keto-primary-red);
+}
+
+.keto-product-breadcrumb span {
+  color: var(--keto-primary-red);
+}
+
+/* =========================================
+           SECTION 2: PRODUCT DETAILS (Left Img / Right Content)
+           ========================================= */
+.keto-product-detail-section {
+  padding: 100px 0;
+  background-color: var(--keto-pure-white);
+}
+
+/* Stylish Frame Image Setup */
+.keto-stylish-img-frame {
+  position: relative;
+  padding: 20px 20px 20px 0;
+  z-index: 1;
+}
+
+/* Overlapping Red Border Outline */
+.keto-stylish-img-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 20px;
+  width: 90%;
+  height: 90%;
+  border: 4px solid var(--keto-primary-red);
+  border-radius: 12px;
+  z-index: -1;
+  transition: var(--keto-transition-smooth);
+}
+
+.keto-stylish-img-frame:hover::before {
+  transform: translate(15px, 15px);
+}
+
+.keto-stylish-img-frame img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  margin-top: 30px;
+}
+
+/* Right Content Area */
+.keto-product-info-wrap {
+  padding-left: 30px;
+}
+
+.keto-product-tag {
+  background-color: var(--keto-primary-red);
+  color: var(--keto-pure-white);
+  font-family: var(--keto-font-heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  padding: 5px 15px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.keto-product-main-title {
+  font-size: 2.8rem;
+  font-weight: 800;
+  color: var(--keto-dark-black);
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+.keto-product-desc {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: var(--keto-text-gray);
+  margin-bottom: 30px;
+}
+
+/* Features List */
+.keto-product-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.keto-product-features li {
+  font-family: var(--keto-font-heading);
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--keto-dark-black);
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.keto-product-features li i {
+  color: var(--keto-primary-red);
+  font-size: 1.3rem;
+  background-color: var(--keto-light-gray);
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.keto-product-action-btn {
+  background-color: var(--keto-primary-red);
+  color: var(--keto-pure-white);
+  border: 2px solid var(--keto-primary-red);
+  padding: 12px 35px;
+  border-radius: 50px;
+  font-family: var(--keto-font-heading);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--keto-transition-fast);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.keto-product-action-btn:hover {
+  background-color: var(--keto-dark-black);
+  border-color: var(--keto-dark-black);
+  color: var(--keto-pure-white);
+}
+
+/* =========================================
+           SECTION 3: PARALLAX SPECIFICATIONS TABLE
+           ========================================= */
+.keto-parallax-specs {
+  position: relative;
+  padding: 100px 0;
+  background-image: url("https://images.unsplash.com/photo-1604014237800-1c9102c219da?q=80&w=1920&auto=format&fit=crop"); /* Premium wood texture */
+  background-size: cover;
+  background-position: center;
+  /* Fixed background for parallax effect */
+  background-attachment: fixed;
+  color: var(--keto-pure-white);
+}
+
+.keto-parallax-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 5, 5, 0.9); /* Dark overlay to make table readable */
+  z-index: 1;
+}
+
+.keto-parallax-content {
+  position: relative;
+  z-index: 2;
+}
+
+.keto-specs-title {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 50px;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--keto-pure-white);
+}
+
+.keto-specs-table-wrapper {
+  background: rgba(255, 255, 255, 0.03); /* Glassmorphism effect */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 40px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.keto-spec-row {
+  display: flex;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 20px 0;
+  align-items: center;
+  transition: var(--keto-transition-fast);
+}
+
+.keto-spec-row:hover {
+  background: rgba(255, 255, 255, 0.02);
+  padding-left: 10px; /* Slight indent on hover */
+}
+
+.keto-spec-row:last-child {
+  border-bottom: none;
+}
+
+.keto-spec-label {
+  width: 35%;
+  font-family: var(--keto-font-heading);
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: var(--keto-primary-red);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.keto-spec-value {
+  width: 65%;
+  font-size: 1.05rem;
+  color: #dddddd;
+  line-height: 1.6;
+}
+
+/* =========================================
+           SECTION 4: RELATED PRODUCTS
+           ========================================= */
+.keto-related-products {
+  padding: 100px 0;
+  background-color: var(--keto-light-gray);
+}
+
+.keto-related-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 50px;
+  color: var(--keto-dark-black);
+  text-transform: capitalize;
+}
+
+.keto-ply-card {
+  background-color: var(--keto-pure-white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: var(--keto-transition-smooth);
+  border-bottom: 3px solid transparent;
+}
+
+.keto-ply-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+  border-bottom-color: var(--keto-primary-red);
+}
+
+.keto-ply-card-img-wrap {
+  width: 100%;
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  position: relative;
+}
+
+.keto-ply-card-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.keto-ply-card:hover .keto-ply-card-img-wrap img {
+  transform: scale(1.08);
+}
+
+.keto-ply-card-content {
+  padding: 30px 25px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.keto-ply-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--keto-dark-black);
+  line-height: 1.3;
+}
+
+.keto-ply-card-desc {
+  font-size: 0.95rem;
+  color: var(--keto-text-gray);
+  margin-bottom: 20px;
+  line-height: 1.6;
+  flex-grow: 1;
+}
+
+.keto-read-more {
+  display: inline-flex;
+  align-items: center;
+  font-family: var(--keto-font-heading);
+  font-weight: 600;
+  color: var(--keto-dark-black);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: var(--keto-transition-fast);
+  margin-top: auto;
+}
+
+.keto-read-more i {
+  margin-left: 8px;
+  color: var(--keto-primary-red);
+  transition: var(--keto-transition-fast);
+}
+
+.keto-read-more:hover {
+  color: var(--keto-primary-red);
+}
+
+.keto-read-more:hover i {
+  transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .keto-product-info-wrap {
+    padding-left: 0;
+    margin-top: 50px;
+  }
+  .keto-product-main-title {
+    font-size: 2.2rem;
+  }
+  .keto-specs-title {
+    font-size: 2.2rem;
+  }
+  .keto-stylish-img-frame::before {
+    width: 100%;
+    left: 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .keto-product-hero {
+    padding: 100px 0 70px 0;
+  }
+  .keto-product-hero-title {
+    font-size: 2.2rem;
+  }
+  .keto-spec-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    padding: 15px 0;
+  }
+  .keto-spec-label,
+  .keto-spec-value {
+    width: 100%;
+  }
+  .keto-specs-table-wrapper {
+    padding: 25px;
+  }
+}
